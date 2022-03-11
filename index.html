@@ -30,8 +30,11 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>   
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
+                    <!-- <a data-toggle="modal" data-target="#loginModal">
+                    <span class="fa fa-sign-in"></span> Login</a> -->
+
+                   <button type="button" class="btn btn-sm" id="myloginBtn"><span class="fa fa-sign-in"></span> Login</button> 
+                   
                 </span>
                 </div>   
         </div>
@@ -81,10 +84,15 @@
                 </div>
                 <div class="col-12 col-sm-6">
                     <img src="img/logo.png" class="img-fluid">
-                    <a  data-toggle="modal" data-target="#reserveTable" class="btn btn-sm btn-warning text-dark ">Reserve Table</a>
+
+                    <button type="button" class="btn btn-sm btn-warning text-dark " id="myBtn">Reserve Table</button>
+
+                    <!-- <a data-target="#reserveTable" class="btn btn-sm btn-warning text-dark ">Reserve Table</a> -->
 
                     <!-- <a   data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
                         data-placement="bottom" href="#reserveTable" class="btn btn-sm btn-warning text-dark ">Reserve Table</a> -->
+                        <!-- <img src="img/logo.png" class="img-fluid">
+                        <a  data-toggle="modal" data-target="#reserveTable" class="btn btn-sm btn-warning text-dark ">Reserve Table</a> -->
                 </div>
             </div>
         </div>
@@ -389,7 +397,15 @@
         });
     </script> -->
     <script>
-      $("#carouselButton").click(function(){
+
+$(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#reserveTable").modal();
+  });
+  $("#myloginBtn").click(function(){
+      $("#loginModal").modal();
+  });
+  $("#carouselButton").click(function(){
         if ($("#carouselButton").children("span").hasClass('fa-pause')) {
             $("#mycarousel").carousel('pause');
             $("#carouselButton").children("span").removeClass('fa-pause');
@@ -401,6 +417,14 @@
             $("#carouselButton").children("span").addClass('fa-pause');                    
         }
        });
+});
+    
+
+    //    $("#reserveTable").model();
+    //     //  $("a.href:['#reserveTable']").attr('data-target','#reserveTable')
+    //        $("#reserveTable").model('toggle');
+
+       
 </script>
 </body>
 

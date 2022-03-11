@@ -3,6 +3,17 @@ $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
 
+    .modal-header{
+        background-color: $background-dark;
+        color:white;
+        .close{
+            color: $lt-gray;
+        }
+    }
+    .modal-body{
+        background-color: $background-pale;
+    }
+
 // Height variables
 $carousel-item-height: 300px;
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
